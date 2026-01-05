@@ -19,7 +19,12 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     
     # CORS
-    ALLOWED_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"]
+    ALLOWED_ORIGINS: list = [
+        "http://localhost:3000", 
+        "http://localhost:5173",
+        "https://*.vercel.app",
+        "https://*.railway.app"
+    ]
     
     class Config:
         env_file = ".env"
